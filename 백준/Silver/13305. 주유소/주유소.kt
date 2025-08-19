@@ -3,32 +3,28 @@
  */
 fun main() {
     val n = readln().toInt()
-    val distanceList = readln().split(" ").map { it.toInt() }
-    val oilPriceList = readln().split(" ").map { it.toInt() }
+    val distanceList = readln().split(" ").map { it.toLong() }
+    val oilPriceList = readln().split(" ").map { it.toLong() }
 
-    var total = 0
+    var total = 0L
     var index = 0
 
-    while (index != n-1) {
-        var checked = false
-        for (i in index + 1 until n-1) {
-            if (oilPriceList[index] > oilPriceList[i]) {
-                for (j in index until i) {
-                    total += distanceList[j] * oilPriceList[j]
-                }
-                index = i
-                checked = true
+    while (index < n-1) {
+        val currentPrice = oilPriceList[index]
+        var oilAmount = 0L
+
+        var next = index
+        while (next < n - 1) {
+            oilAmount += distanceList[next]
+            next++
+
+            if (next < n - 1 && oilPriceList[next] < currentPrice) {
                 break
             }
         }
-        if (!checked) {
-            var count = 0
-            for (i in index until n-1) {
-                total += distanceList[i] * oilPriceList[index]
-                count++
-            }
-            index += count
-        }
+
+        total += currentPrice * oilAmount
+        index = next
     }
 
     print(total)
