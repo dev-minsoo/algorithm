@@ -1,64 +1,33 @@
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.util.LinkedList
-import java.util.Queue
-import java.util.StringTokenizer
+val dirs = arrayOf(1 to 1, 1 to -1, -1 to 1, -1 to -1, 1 to 0, -1 to 0, 0 to 1, 0 to -1)
 
-var n: Int = 0
-var m: Int = 0
+fun isValid (x: Int, y: Int, graph: Array<IntArray>): Boolean =
+    x in 0 until graph.size && y in 0 until graph[0].size
 
-lateinit var graph: Array<IntArray>
+fun dfs (x: Int, y: Int, graph: Array<IntArray>) {
+    graph[x][y] = 2
 
-val dx = arrayOf(0,0,1,-1,1,-1,1,-1)
-val dy = arrayOf(1,-1,0,0,1,1,-1,-1)
-
-var cnt: Int = 0
-
-fun main() {
-    val br = BufferedReader(InputStreamReader(System.`in`))
-    var st = StringTokenizer(br.readLine())
-
-    n = st.nextToken().toInt()
-    m = st.nextToken().toInt()
-
-    graph = Array(n) { IntArray(m) }
-
-    for (i in 0 until n) {
-        st = StringTokenizer(br.readLine())
-        for (j in 0 until m) {
-            graph[i][j] = st.nextToken().toInt()
+    for (dir in dirs) {
+        val nx = x + dir.first
+        val ny = y + dir.second
+        if (isValid(nx, ny, graph) && graph[nx][ny] == 1) {
+            dfs(nx, ny, graph)
         }
     }
+}
 
+fun main() {
+    val (n, m) = readln().split(" ").map { it.toInt() }
+    val graph = Array(n) { readln().split(" ").map { it.toInt() }.toIntArray() }
+
+    var result = 0
     for (i in 0 until n) {
         for (j in 0 until m) {
             if (graph[i][j] == 1) {
-                graph[i][j] = 2
-                bfs(i, j)
-                cnt++
+                dfs(i, j, graph)
+                result++
             }
         }
     }
 
-    println(cnt)
-}
-
-fun bfs(i: Int, j: Int) {
-    var queue: Queue<Pair<Int, Int>> = LinkedList()
-    queue.add(Pair(i, j))
-
-    while (queue.isNotEmpty()) {
-        var (x, y) = queue.poll()
-        for (k in 0..7) {
-            var nx = x + dx[k]
-            var ny = y + dy[k]
-
-            if (nx in 0 until n && ny in 0 until m) {
-                if (graph[nx][ny] == 1) {
-                    graph[nx][ny] = 2
-                    queue.add(Pair(nx, ny))
-                }
-            }
-        }
-    }
+    println(result)
 }
