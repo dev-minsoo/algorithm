@@ -3,8 +3,10 @@
  */
 fun main() {
     val (n, m, v) = readln().split(" ").map { it.toInt() }
+
     val graph = Array(n+1) { mutableListOf<Int>() }
     var visited = BooleanArray(n+1)
+
     val dfsResult = mutableListOf<Int>()
     val bfsResult = mutableListOf<Int>()
 
@@ -32,7 +34,6 @@ fun main() {
         val queue = ArrayDeque<Int>()
         visited[start] = true
         queue.add(start)
-        queue.first()
 
         while (queue.isNotEmpty()) {
             val node = queue.removeFirst()
@@ -50,7 +51,6 @@ fun main() {
     dfs(v)
     visited = BooleanArray(n+1)
     bfs(v)
-
 
     println(dfsResult.joinToString(" "))
     println(bfsResult.joinToString(" "))
