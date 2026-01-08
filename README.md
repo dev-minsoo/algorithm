@@ -6,10 +6,12 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 ## Two Pointers
 |  |
 | ------- |
+| [0125-valid-palindrome](https://github.com/dev-minsoo/algorithm/tree/master/0125-valid-palindrome) |
 | [0696-count-binary-substrings](https://github.com/dev-minsoo/algorithm/tree/master/0696-count-binary-substrings) |
 ## String
 |  |
 | ------- |
+| [0125-valid-palindrome](https://github.com/dev-minsoo/algorithm/tree/master/0125-valid-palindrome) |
 | [0696-count-binary-substrings](https://github.com/dev-minsoo/algorithm/tree/master/0696-count-binary-substrings) |
 ## Array
 |  |
