@@ -18,6 +18,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/dev-minsoo/algorithm/tree/master/0001-two-sum) |
+| [1004-max-consecutive-ones-iii](https://github.com/dev-minsoo/algorithm/tree/master/1004-max-consecutive-ones-iii) |
 ## Hash Table
 |  |
 | ------- |
@@ -34,4 +35,16 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0206-reverse-linked-list](https://github.com/dev-minsoo/algorithm/tree/master/0206-reverse-linked-list) |
+## Binary Search
+|  |
+| ------- |
+| [1004-max-consecutive-ones-iii](https://github.com/dev-minsoo/algorithm/tree/master/1004-max-consecutive-ones-iii) |
+## Sliding Window
+|  |
+| ------- |
+| [1004-max-consecutive-ones-iii](https://github.com/dev-minsoo/algorithm/tree/master/1004-max-consecutive-ones-iii) |
+## Prefix Sum
+|  |
+| ------- |
+| [1004-max-consecutive-ones-iii](https://github.com/dev-minsoo/algorithm/tree/master/1004-max-consecutive-ones-iii) |
 <!---LeetCode Topics End-->
