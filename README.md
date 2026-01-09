@@ -18,6 +18,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/dev-minsoo/algorithm/tree/master/0001-two-sum) |
+| [0485-max-consecutive-ones](https://github.com/dev-minsoo/algorithm/tree/master/0485-max-consecutive-ones) |
 | [1004-max-consecutive-ones-iii](https://github.com/dev-minsoo/algorithm/tree/master/1004-max-consecutive-ones-iii) |
 ## Hash Table
 |  |
