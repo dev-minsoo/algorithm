@@ -14,6 +14,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | [0003-longest-substring-without-repeating-characters](https://github.com/dev-minsoo/algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0020-valid-parentheses](https://github.com/dev-minsoo/algorithm/tree/master/0020-valid-parentheses) |
 | [0125-valid-palindrome](https://github.com/dev-minsoo/algorithm/tree/master/0125-valid-palindrome) |
+| [0424-longest-repeating-character-replacement](https://github.com/dev-minsoo/algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0696-count-binary-substrings](https://github.com/dev-minsoo/algorithm/tree/master/0696-count-binary-substrings) |
 | [1456-maximum-number-of-vowels-in-a-substring-of-given-length](https://github.com/dev-minsoo/algorithm/tree/master/1456-maximum-number-of-vowels-in-a-substring-of-given-length) |
 ## Array
@@ -29,6 +30,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0001-two-sum](https://github.com/dev-minsoo/algorithm/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/dev-minsoo/algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0424-longest-repeating-character-replacement](https://github.com/dev-minsoo/algorithm/tree/master/0424-longest-repeating-character-replacement) |
 ## Stack
 |  |
 | ------- |
@@ -51,6 +53,7 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/dev-minsoo/algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0209-minimum-size-subarray-sum](https://github.com/dev-minsoo/algorithm/tree/master/0209-minimum-size-subarray-sum) |
+| [0424-longest-repeating-character-replacement](https://github.com/dev-minsoo/algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0643-maximum-average-subarray-i](https://github.com/dev-minsoo/algorithm/tree/master/0643-maximum-average-subarray-i) |
 | [1004-max-consecutive-ones-iii](https://github.com/dev-minsoo/algorithm/tree/master/1004-max-consecutive-ones-iii) |
 | [1456-maximum-number-of-vowels-in-a-substring-of-given-length](https://github.com/dev-minsoo/algorithm/tree/master/1456-maximum-number-of-vowels-in-a-substring-of-given-length) |
