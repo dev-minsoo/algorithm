@@ -1,43 +1,40 @@
 /**
  * p1012 유기농 배추
  */
-val dx = arrayOf(1, -1, 0, 0)
-val dy = arrayOf(0, 0, 1, -1)
+val dirs = arrayOf(0 to 1, 0 to -1, 1 to 0, -1 to 0)
 
-fun isValid(x: Int, y: Int, n: Int, m: Int): Boolean {
-    return x in 0 until n && y in 0 until m
-}
+fun isValid(graph: Array<IntArray>, x: Int, y: Int): Boolean =
+    x in graph.indices && y in graph[0].indices
 
-fun dfs(x: Int, y: Int, graph: Array<IntArray>) {
+
+fun dfs(graph: Array<IntArray>, x: Int, y: Int) {
     graph[x][y] = 2
-    repeat(4) { i ->
-        val nx = x + dx[i]
-        val ny = y + dy[i]
-        if (isValid(nx, ny, graph.size, graph[0].size)) {
-            if (graph[nx][ny] == 1) {
-                dfs(nx, ny, graph)
-            }
+
+    for (dir in dirs) {
+        val nx = x + dir.first
+        val ny = y + dir.second
+        if (isValid(graph, nx, ny) && graph[nx][ny] == 1) {
+            dfs(graph, nx, ny)
         }
     }
 }
 
 fun main() {
-    val t = readln().toInt()
-    repeat(t) {
+    repeat(readln().toInt()) {
         val (m, n, k) = readln().split(" ").map { it.toInt() }
-        val graph = Array(n) { IntArray(m) }
+        val graph = Array(m) { IntArray(n) }
         var result = 0
 
         repeat(k) {
-            val (y, x) = readln().split(" ").map { it.toInt() }
+            val (x, y) = readln().split(" ").map { it.toInt() }
             graph[x][y] = 1
         }
 
-        for (i in 0 until n) {
-            for (j in 0 until m) {
+        for (i in 0 until m) {
+            for (j in 0 until n) {
                 if (graph[i][j] == 1) {
                     result++
-                    dfs(i, j, graph)
+                    dfs(graph, i, j)
                 }
             }
         }
